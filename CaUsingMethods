@@ -1,0 +1,53 @@
+/*
+caUsingMethods
+@Thavi021
+learning how to use methods in a program(procedures and functions)
+ */
+package causingmethods;
+
+
+public class CaUsingMethods {
+    static int intNumber3;     //prvents the program from working because the lack of the  word static thus add the word static in front of declaration THIS IDEA FIXES intNumber2
+
+    
+    public static void main(String[] args) {    //"static" = does not need to be instatiated to be used
+        //public, static and private are an NB
+        int intNumber1;
+                                          // int intNumber2; //if you declare it here you cannot declare it another method this is a local variable thus accessible in the other method below
+        
+        intNumber1 = 23;
+        System.out.println("The first number is " + intNumber1);
+        intNumber3 = 123;
+        //call the other method/procedure
+        //printTheOtherNumber();
+        
+        //cal the other method the function
+        //ClaculateSomething(); //this worked but didn't
+        
+        int intNumber5;
+        intNumber5 = Calculatesomething();
+        
+        System.out.println("this function gave back an answer of" + intNumber5);
+        
+
+   }
+    //Creating a procedure.
+    public static void printtheothernumber(){
+       // intNumber - 566;                       //there is a problem - the intnumber2 declared in main is not accessible here
+       //you are not allowed to use those symbols anywhere
+        /*Local variable means to only be allowed to used where declared*/
+        
+        intNumber3 = 786;
+        System.out.println("the othe name is " + intNumber3);
+            } 
+
+
+//This is a function
+public static int Calculatesomething() {
+   int intNumber3 = 4;
+           int intNumber4;
+           intNumber4 = intNumber3 = intNumber3;
+        return intNumber4;
+       
+}
+}
